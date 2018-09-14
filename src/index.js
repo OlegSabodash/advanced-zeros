@@ -1,6 +1,7 @@
 module.exports = function getsumerosCount(number, base) {
-  var baseOne = base;
+  var baseOne = base
   var y = 0;
+  var numberOne = number;
   var sum = 0;
   var arr = [];
   var n;
@@ -12,9 +13,10 @@ module.exports = function getsumerosCount(number, base) {
               y++;
               baseOne = Math.floor(baseOne / i);
           }
+          sum = 0;
           
           while (Math.pow(i, n) < number) {
-              sum += Math.floor(number / Math.pow(i, n));
+              sum += Math.floor(numberOne / Math.pow(i, n));
               n++;
           }
           arr.push(sum / y);
